@@ -5,5 +5,7 @@ const { authAdmin } = require("../middlewares/auth")
 router.get("/", productController.getAllProducts)
 router.get("/:id", productController.getProductById)
 router.post("/",authAdmin, productController.createProduct)
+router.put("/", authAdmin,productController.updateProduct)
 module.exports = router
+
 
